@@ -1,0 +1,13 @@
+div {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    background-color: pink;
+}
+
+#red {
+    background-color: red;
+}
+body {
+    height: 3000px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>task002</title>
+        <!-- <script type="text/javascript" src="util.js"></script> -->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    
+    <body>
+        <input id="number1" type="text">
+        <input id="number2" type="text">
+        <span id="result"></span>
+        <button id="addbtn"></button>
+        <p id="adom" class="box"></p>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="red"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+    </body>
+    <script>
+        var oDiv = document.getElementById("red");
+        //div在页面的占位高，div到body的距离
+        var otop = oDiv.offsetTop;
+        console.log(otop);
+        //页面滚动
+        window.onscroll = function() {
+           //获取页面的滚动距离
+            var oheight = document.documentElement.scrollTop || document.body.scrollTop;
+            //滚动到一定位置 div固定到顶部 js实现吸顶
+            if (otop < oheight) {
+                oDiv.style.position = "fixed";
+                oDiv.style.top = 0;
+            } else {
+                oDiv.style.position = "relative";
+            }
+        }
+    </script>
+</html>
